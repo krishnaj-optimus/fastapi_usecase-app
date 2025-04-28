@@ -12,5 +12,5 @@ async def assign_role(request: Request):
     role = "user" if filename == "user.pdf" else "group"
     
     # Return the role as a plain string response
-    return Response(role, media_type="text/plain")  # Return plain text response
+    return {"role": role}  # Return plain text response
 
